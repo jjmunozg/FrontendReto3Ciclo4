@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Asesor</title>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- TEMPLETE ADMIN -->
+    <link href="resources/css/app.css" rel="stylesheet">
+    <!-- DATA TABLES -->
+    <link href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css">
+    <!-- FUENTES -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- MIS JS -->
+    <script src="resources/js/asesorPerfil.js"></script>
+</head>
+<body>
+    <!-- CONTAINER GENERAL -->
+    <div class="wrapper">
+        <!-- MI NAV VERTICAL-->
+        <nav id="sidebar" class="sidebar js-sidebar">
+
+			<div class="sidebar-content js-simplebar">
+
+				<a class="sidebar-brand" href="index.html"><span class="align-middle">Perfil Asesor</span></a>
+
+				<ul class="sidebar-nav">
+					<li class="sidebar-header">Servicios</li>
+					<li class="sidebar-item active"><a class="sidebar-link" href="perfilAdmin.html"><i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Orden de pedido</span></a></li>
+				</ul>
+
+			</div>
+		</nav>
+        <!-- FIN MI NAV -->
+        <!-- CONTAINER MAIN -->
+        <div class="main">
+            <!-- MENU SUPERIOR -->
+            <nav class="navbar navbar-expand navbar-light navbar-bg">
+				<a class="sidebar-toggle js-sidebar-toggle"><i class="hamburger align-self-center"></i></a>
+
+				<div class="navbar-collapse collapse">
+					<ul class="navbar-nav navbar-align">
+						<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+                            <img src="resources/img/avatars/avatar.png" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark miNombreUsuario">Charles Hall</span>
+                        </a>
+					</ul>
+				</div>
+			</nav>
+            <!-- FIN MENU SUPERIOR -->
+            <!-- MI CONTENIDO -->
+            <main class="content">
+                <!-- Admin usuarios -->
+                <div class="adminUsuarios">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModalRegistro">Agregar Producto</button>
+                    <br>
+                    <br>
+                    <table id="tablaOrdenes" class="table table-striped" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Reference</th>
+                                <th>Brand</th>
+                                <th>Category</th>
+                                <th>Name</th>
+                                <th>Availability</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Agregar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Reference</th>
+                                <th>Brand</th>
+                                <th>Category</th>
+                                <th>Name</th>
+                                <th>Availability</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Agregar</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <!-- Fin Admin usuarios -->
+                <div class="adminProductos">
+                </div>
+            </main>
+            <!-- FIN CONTENIDO -->
+        </div>
+        <!-- FIN CONTAINER MAIN -->
+        <!-- modal Registro -->
+        <div class="modal fade" id="myModalRegistro">
+            <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                <h4 class="modal-title">Agregar Producto a la orden</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="misProductosListar">
+                        <table id="tablaMostrarProductos" class="table table-striped" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Reference</th>
+                                    <th>Brand</th>
+                                    <th>Category</th>
+                                    <th>Name</th>
+                                    <th>Availability</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Agregar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Reference</th>
+                                    <th>Brand</th>
+                                    <th>Category</th>
+                                    <th>Name</th>
+                                    <th>Availability</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Agregar</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <button type="button" class="btn btn-primary btn_agregarProducto">Agregar Producto</button>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        </div>
+        <!-- ***Fin Registro -->
+        <!-- modal Registro Editar-->
+        <div class="modal fade" id="myModalRegistroEditar">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                <h4 class="modal-title">Editar usuario</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="miFormRegistroEditar">
+                        <label for="usr">Identificación:</label>
+                        <input type="text" class="form-control" id="identificacion_e" name="identificacion">
+                        <label for="usr">Nombre:</label>
+                        <input type="text" class="form-control" id="nombre_e" name="nombre">
+                        <label for="usr">Dirección:</label>
+                        <input type="text" class="form-control" id="direccion_e" name="direccion">
+                        <label for="usr">cellPhone:</label>
+                        <input type="text" class="form-control" id="celular_e" name="celular">
+                        <label for="usr">Email:</label>
+                        <input type="text" class="form-control" id="mail_e" name="E-mail">
+                        <label for="usr">Password:</label>
+                        <input type="text" class="form-control" id="pwd_e" name="password">
+                        <br>
+                        <label for="usr">Zona</label>
+                        <select id="zona_e">
+                            <option value="">Escoge un zona</option>
+                            <option value="ZONA 1">ZONA 1</option>
+                            <option value="ZONA 2">ZONA 2</option>
+                            <option value="ZONA 3">ZONA 3</option>
+                            <option value="ZONA 4">ZONA 4</option>
+                            <option value="ZONA 5">ZONA 5</option>
+                        </select>
+                        <br>
+                        <label for="usr">Type</label>
+                        <select id="type_e">
+                            <option value="">Escoge un tipo de usuario</option>
+                            <option value="ADM">Administrador</option>
+                            <option value="COORD">Coordinador de Zona</option>
+                            <option value="COORD">Asesor Comercial</option>
+                        </select>
+                        <!-- MI ALERT -->
+                        <p style="color: red;" class="alertaRegistro"></p>
+                        <button type="button" class="btn btn-primary btn_editarUsuario">Editar Usuario</button>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        </div>
+        <!-- ***Fin Registro -->
+    </div>
+    <!--  FIN CONTAINER GENERAL -->
+    <script src="resources/js/app.js"></script>
+</body>
+</html>

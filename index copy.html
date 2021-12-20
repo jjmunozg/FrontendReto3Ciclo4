@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- MIS JS -->
+    <script src="resources/js/index.js"></script>
+    <link rel="stylesheet" href="resources/css/estilos.css">
+</head>
+<body>
+    <!-- MI NAV -->
+    <div class="miNav">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">LOGO</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+                    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModalRegistro">Registro</button> -->
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModalLogin">Login</button>
+                </span>
+                </div>
+            </div>
+            </nav>
+
+    </div>
+    <!-- ***MI NAV -->
+    <!-- MI CABECERA -->
+    <div class="miHeader">
+        <div class="mt-3">
+            <div class="mt-5 p-5 bg-secondary text-white rounded">
+                <h1>Jumbotron Example</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..</p>
+            </div>
+        </div>
+    </div>
+    <!-- ***MI CABECERA -->
+    <!-- MI BODY -->
+    <div class="miBody">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>Seccion 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure optio quis saepe magni, rem cumque qui, ducimus tempore ipsam ab perspiciatis facere, eos ut dicta reiciendis eaque. Ipsum, soluta! Eveniet.</p>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Seccion 2</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure optio quis saepe magni, rem cumque qui, ducimus tempore ipsam ab perspiciatis facere, eos ut dicta reiciendis eaque. Ipsum, soluta! Eveniet.</p>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Seccion 3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure optio quis saepe magni, rem cumque qui, ducimus tempore ipsam ab perspiciatis facere, eos ut dicta reiciendis eaque. Ipsum, soluta! Eveniet.</p>
+                </div>
+            </div>
+        </div>
+        <!-- MIS MODALS -->
+        <!-- modal Registro -->
+        <div class="modal fade" id="myModalRegistro">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                <h4 class="modal-title">Registro</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="miFormRegistro">
+                        <label for="usr">Nombre:</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre">
+                        <label for="usr">Email:</label>
+                        <input type="text" class="form-control" id="mail" name="E-mail">
+                        <label for="usr">Password:</label>
+                        <input type="text" class="form-control" id="pwd" name="password">
+                        <label for="usr">Confirmación Password:</label>
+                        <input type="text" class="form-control" id="pwr_r" name="canfirmar password">
+                        <!-- MI ALERT -->
+                        <p style="color: red;" class="alertaRegistro"></p>
+                        <button type="button" class="btn btn-primary btn_registrarse">Registrarse</button>
+                    </div>
+                </div>
+                <div class="confirmacionRegistro">
+                    <div class="alert alert-success">
+                        <strong>Bienvenid@!</strong> Te has registrado correctamente.
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        </div>
+        <!-- ***Fin Registro -->
+        <!-- modal Login -->
+        <div class="modal fade" id="myModalLogin">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                <h4 class="modal-title">Login</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="miFormLogin">
+                        <label for="usr">Usuario:</label>
+                        <input type="text" class="form-control" id="usr_login" name="usuario">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" id="pwd_login" name="password">
+                        <!-- MI ALERT -->
+                        <p style="color: red;" class="alertaLogin"></p>
+                        <button type="button" class="btn btn-primary btn_login">Ingresar</button>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        </div>
+        <!-- ***Fin Login -->
+        <!-- ***MIS MODALS -->
+    </div>
+    <!-- ***MI BODY -->
+    <!-- MI FOOTER -->
+    <div class="miFooter">
+        <footer class="bg-light text-center text-lg-start">
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2020 Copyright:
+                <a class="text-dark" href="#">Creado por Karina Arias</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+    </div>
+    <!-- ***MI FOOTER -->
+</body>
+</html>
